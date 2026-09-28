@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 int main()
 {
     int n, element;
@@ -7,7 +8,7 @@ int main()
     printf("Enter number of elements: ");
     scanf("%d", &n);
 
-    int arr[n];
+    int arr[n + 1];
 
     for(i = 0; i < n; i++)
     {
@@ -28,7 +29,6 @@ int main()
     {
         arr[i] = arr[i - 1];
     }
-
     arr[pos] = element;
     n++;
 
@@ -37,6 +37,5 @@ int main()
     {
         printf("%d ", arr[i]);
     }
-    
     return 0;
 }
